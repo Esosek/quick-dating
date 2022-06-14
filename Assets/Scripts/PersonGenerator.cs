@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PersonGenerator : MonoBehaviour {
     [SerializeField] private GameObject personPrefab = null;
