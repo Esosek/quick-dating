@@ -28,7 +28,7 @@ public class PersonGenerator : MonoBehaviour {
 
     TraitSO[] GenerateTraits()
     {
-        List<TraitSO> traitList = new List<TraitSO>();
+        List<TraitSO> traitList = new List<TraitSO>(traitArray);
         return traitArray;
     }
 }
