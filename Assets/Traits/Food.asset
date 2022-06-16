@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f5fec6f1fb47415eb3eb537100ba3d1, type: 3}
-  m_Name: Sport
+  m_Name: Food
   m_EditorClassIdentifier: 
   lines:
-  - Did you see the game last night?
-  - I was a bit sad when I heard Martin Fourcade retired from biathlon.
-  - I felt relieved when Czech won bronze medal in ice hockey world championship.
-  - Last week, I finally finished my first half-marathon!
+  - Don't eat local's shrimps. They are awful!
+  - What's your favorite place to eat out?
+  - Honestly, I'm a terrible cook. But I wish to improve.
+  - Do you want to come to my place for a delicious burrito?

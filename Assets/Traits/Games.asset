@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f5fec6f1fb47415eb3eb537100ba3d1, type: 3}
-  m_Name: Sport
+  m_Name: Games
   m_EditorClassIdentifier: 
   lines:
-  - Did you see the game last night?
-  - I was a bit sad when I heard Martin Fourcade retired from biathlon.
-  - I felt relieved when Czech won bronze medal in ice hockey world championship.
-  - Last week, I finally finished my first half-marathon!
+  - Do you game on PC or console?
+  - I heard someone payed $6000 and got no improvement in Diablo Immortal. Sad.
+  - Do you play as a male or female character in RPGs?
+  - I've got some nice couch co-op games at home. Want to come over?
