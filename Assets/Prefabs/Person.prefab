@@ -1220,6 +1220,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2408134311506533248}
   - component: {fileID: -5520575858425522620}
+  - component: {fileID: 1418822093684928479}
+  - component: {fileID: 7315535679824071744}
   m_Layer: 5
   m_Name: Person
   m_TagString: Untagged
@@ -1267,6 +1269,48 @@ MonoBehaviour:
   orientationImage: {fileID: 2408134311252621162}
   maleGenderAsset: {fileID: 11400000, guid: 0d3791e56f4eb44da8658131c23c1980, type: 2}
   femaleGenderAsset: {fileID: 11400000, guid: 92ee09aefb61a49ea90dbb6dc8f8b442, type: 2}
+--- !u!114 &1418822093684928479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2408134311506533251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de691fab5aa920cab90f59a4c5fdb69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previewPersonAsset: {fileID: 11400000, guid: a827981068eefc65eb021ccce266ed5d, type: 2}
+--- !u!114 &7315535679824071744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2408134311506533251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1418822093684928479}
+          m_TargetAssemblyTypeName: PersonPreview, Assembly-CSharp
+          m_MethodName: SetPreviewPerson
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2624516073518510414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1448,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2801749247317161775}
+  - component: {fileID: 2738721621579899823}
+  - component: {fileID: 498889572503562112}
+  - component: {fileID: 6317337639778868612}
   m_Layer: 5
   m_Name: Man
   m_TagString: Untagged
@@ -1428,6 +1475,84 @@ Transform:
   m_Father: {fileID: 2408134311506533248}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!95 &2738721621579899823
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290443250954857877}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 44dc9b33c3959a53d91d19827f6f3cbf, type: 3}
+  m_Controller: {fileID: 9100000, guid: a14c6cd0f09ba252982cfd4a66a37aaf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &498889572503562112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290443250954857877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54544992dc4a1bde9c4fe1f503f9b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hair: {fileID: 1486867126546015091}
+  mustache: {fileID: 7497613670800519237}
+  shoes: {fileID: 7306539069999416150}
+  dress: {fileID: 7038320895680803615}
+  jeans: {fileID: 4234127950021607973}
+  hairMaterialPool:
+  - {fileID: 2100000, guid: f002b408dc1eab1d484d54d3b9768964, type: 2}
+  - {fileID: 2100000, guid: 38e08fd76daef5c7a99c1bda5571f4f6, type: 2}
+  - {fileID: 2100000, guid: 17070a37510fddc35a3d59692c6d06c2, type: 2}
+  - {fileID: 2100000, guid: 874214e067fc4b129888e0df350dd153, type: 2}
+  shoesMaterialPool:
+  - {fileID: 2100000, guid: a9bfdaf3c5a3cd95f869576e06e061fa, type: 2}
+  - {fileID: 2100000, guid: 17070a37510fddc35a3d59692c6d06c2, type: 2}
+  - {fileID: 2100000, guid: f002b408dc1eab1d484d54d3b9768964, type: 2}
+  - {fileID: 2100000, guid: 38e08fd76daef5c7a99c1bda5571f4f6, type: 2}
+  - {fileID: 2100000, guid: 6e48135f20f36223cb1758e9b08315f0, type: 2}
+  - {fileID: 2100000, guid: e2af4e24934a2bfebbb434000fe86dab, type: 2}
+  - {fileID: 2100000, guid: c9f703ef97875f6368d1adede8a3b05a, type: 2}
+  dressMaterialPool:
+  - {fileID: 2100000, guid: a9bfdaf3c5a3cd95f869576e06e061fa, type: 2}
+  - {fileID: 2100000, guid: 17070a37510fddc35a3d59692c6d06c2, type: 2}
+  - {fileID: 2100000, guid: f002b408dc1eab1d484d54d3b9768964, type: 2}
+  - {fileID: 2100000, guid: 38e08fd76daef5c7a99c1bda5571f4f6, type: 2}
+  - {fileID: 2100000, guid: 6e48135f20f36223cb1758e9b08315f0, type: 2}
+  - {fileID: 2100000, guid: e2af4e24934a2bfebbb434000fe86dab, type: 2}
+  - {fileID: 2100000, guid: c9f703ef97875f6368d1adede8a3b05a, type: 2}
+  jeansMaterialPool:
+  - {fileID: 2100000, guid: 6e48135f20f36223cb1758e9b08315f0, type: 2}
+  - {fileID: 2100000, guid: f002b408dc1eab1d484d54d3b9768964, type: 2}
+  - {fileID: 2100000, guid: 38e08fd76daef5c7a99c1bda5571f4f6, type: 2}
+  - {fileID: 2100000, guid: c9f703ef97875f6368d1adede8a3b05a, type: 2}
+--- !u!114 &6317337639778868612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290443250954857877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8a57e8792af5aa9b74ff259f7aa753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationsCount: 3
+  sitAnimationCount: 2
+  anim: {fileID: 2738721621579899823}
 --- !u!1 &3290443252610190945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1563,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2801749248790041819}
   - component: {fileID: 8071009962318679713}
+  - component: {fileID: 2984672772658962403}
+  - component: {fileID: 4923492461844545678}
   m_Layer: 5
   m_Name: Woman
   m_TagString: Untagged
@@ -1472,7 +1599,7 @@ Animator:
   m_GameObject: {fileID: 3290443252610190945}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 848b0f478b2a1066d8398321db9158ed, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a14c6cd0f09ba252982cfd4a66a37aaf, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1482,6 +1609,58 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2984672772658962403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290443252610190945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54544992dc4a1bde9c4fe1f503f9b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hair: {fileID: 902661439626765455}
+  mustache: {fileID: 0}
+  shoes: {fileID: 5331667731864421530}
+  dress: {fileID: 425212933904492050}
+  jeans: {fileID: 2137702957170803345}
+  hairMaterialPool:
+  - {fileID: 2100000, guid: f002b408dc1eab1d484d54d3b9768964, type: 2}
+  - {fileID: 2100000, guid: 38e08fd76daef5c7a99c1bda5571f4f6, type: 2}
+  - {fileID: 2100000, guid: 17070a37510fddc35a3d59692c6d06c2, type: 2}
+  - {fileID: 2100000, guid: a9bfdaf3c5a3cd95f869576e06e061fa, type: 2}
+  shoesMaterialPool:
+  - {fileID: 2100000, guid: f002b408dc1eab1d484d54d3b9768964, type: 2}
+  - {fileID: 2100000, guid: 17070a37510fddc35a3d59692c6d06c2, type: 2}
+  - {fileID: 2100000, guid: a9bfdaf3c5a3cd95f869576e06e061fa, type: 2}
+  - {fileID: 2100000, guid: 38e08fd76daef5c7a99c1bda5571f4f6, type: 2}
+  - {fileID: 2100000, guid: e2af4e24934a2bfebbb434000fe86dab, type: 2}
+  dressMaterialPool:
+  - {fileID: 2100000, guid: c9f703ef97875f6368d1adede8a3b05a, type: 2}
+  - {fileID: 2100000, guid: a9bfdaf3c5a3cd95f869576e06e061fa, type: 2}
+  - {fileID: 2100000, guid: 17070a37510fddc35a3d59692c6d06c2, type: 2}
+  - {fileID: 2100000, guid: 6e48135f20f36223cb1758e9b08315f0, type: 2}
+  - {fileID: 2100000, guid: e2af4e24934a2bfebbb434000fe86dab, type: 2}
+  jeansMaterialPool:
+  - {fileID: 2100000, guid: 17070a37510fddc35a3d59692c6d06c2, type: 2}
+  - {fileID: 2100000, guid: 874214e067fc4b129888e0df350dd153, type: 2}
+--- !u!114 &4923492461844545678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290443252610190945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8a57e8792af5aa9b74ff259f7aa753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimationsCount: 3
+  sitAnimationCount: 2
+  anim: {fileID: 8071009962318679713}
 --- !u!1 &3533851825324951405
 GameObject:
   m_ObjectHideFlags: 0

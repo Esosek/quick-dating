@@ -19,7 +19,7 @@ public class PersonGenerator : MonoBehaviour {
         // store gender to use it in name generator
         GenderSO _gender = GenerateGender();
         // push generated data to new Person
-        _newPerson.GetComponent<Person>().SetPerson(GenerateName(_gender), _gender, GenerateTraits(3), GenerateOrientation());
+        _newPerson.GetComponent<Person>().SetPerson(GenerateName(_gender), _gender, GenerateOrientation(), GenerateTraits(3));
     }
 
     GenderSO GenerateGender()
