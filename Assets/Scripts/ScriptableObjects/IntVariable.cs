@@ -18,6 +18,11 @@ public class IntVariable : ScriptableObject {
         LogEvent();
     }
 
+    public void Reset() {
+        Value = 0;
+        LogEvent();
+    }
+
     void LogEvent()
     {
         Debug.Log(this.name + " variable changed to " + Value);
