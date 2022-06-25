@@ -26,9 +26,9 @@ public class PersonColors : MonoBehaviour
         mustache.GetComponent<Renderer>().sharedMaterial = hair.GetComponent<Renderer>().sharedMaterial;
     }
 
-    void SetColor(GameObject _object, Material[] _sourceArray) {
-        if(_object == null) return; // null check
-        int _index = Random.Range(0, _sourceArray.Length);
-        _object.GetComponent<Renderer>().sharedMaterial = _sourceArray[_index];
+    void SetColor(GameObject item, Material[] sourceArray) {
+        if(item == null) return; // null check
+        int _index = Random.Range(0, sourceArray.Length);
+        item.GetComponent<Renderer>().sharedMaterial = sourceArray[_index];
     }
 }

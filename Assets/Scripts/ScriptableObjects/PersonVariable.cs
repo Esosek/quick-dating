@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "New PersonVariable", menuName = "Variables/PersonVariable")]
+[CreateAssetMenu(fileName = "New PersonVariable", menuName = "Variable/PersonVariable")]
 public class PersonVariable : ScriptableObject {
 
     public string PersonName { get; private set; }

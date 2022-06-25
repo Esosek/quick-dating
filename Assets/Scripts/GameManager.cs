@@ -2,17 +2,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Config")]
-    [SerializeField] private int startingPersonNumber = 6;
+    [SerializeField] private GameConfig config = null;
 
     [Header("Events")]
     [SerializeField] private GameEvent generatePersonEvent = null;
 
     void Start()
     {
-        for (int i = 0; i < startingPersonNumber; i++)
+        if(config != null) 
         {
-            if(generatePersonEvent != null) generatePersonEvent.Raise();
+            for (int i = 0; i < config.StartPersonNumber; i++) 
+            {
+                if(generatePersonEvent != null) generatePersonEvent.Raise();
+            }
         }
+
+        else Debug.LogWarning("GAME MANAGER: No config asset found!");        
     }
 }

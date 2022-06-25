@@ -17,9 +17,9 @@ public class PersonGenerator : MonoBehaviour {
     {
         GameObject _newPerson = Instantiate(personPrefab, loaderTransform);
         // store gender to use it in name generator
-        GenderSO _gender = GenerateGender();
+        GenderSO gender = GenerateGender();
         // push generated data to new Person
-        _newPerson.GetComponent<Person>().SetPerson(GenerateName(_gender), _gender, GenerateOrientation(), GenerateTraits(3));
+        _newPerson.GetComponent<Person>().SetPerson(GenerateName(gender), gender, GenerateOrientation(), GenerateTraits(3));
     }
 
     GenderSO GenerateGender()
@@ -34,12 +34,12 @@ public class PersonGenerator : MonoBehaviour {
         return genderArray[_index];
     }
 
-    TraitSO[] GenerateTraits(int _numberOfTraits)
+    TraitSO[] GenerateTraits(int numberOfTraits)
     {
         List<TraitSO> _traitList = new List<TraitSO>(traitArray);
         List<TraitSO> _selectedTraits = new List<TraitSO>();
 
-        for (int i = 0; i < _numberOfTraits; i++)
+        for (int i = 0; i < numberOfTraits; i++)
         {
             int _randomTraitIndex = Random.Range(0, _traitList.Count);
             _selectedTraits.Add(_traitList[_randomTraitIndex]);
@@ -49,13 +49,13 @@ public class PersonGenerator : MonoBehaviour {
         return _selectedTraits.ToArray();
     }
 
-    string GenerateName(GenderSO _gender)
+    string GenerateName(GenderSO gender)
     {
-        if(_gender == maleGenderAsset) {
+        if(gender == maleGenderAsset) {
             int _index = Random.Range(0, maleNames.Length);
             return maleNames[_index];
         }
-        else if (_gender == femaleGenderAsset) {
+        else if (gender == femaleGenderAsset) {
             int _index = Random.Range(0, femaleNames.Length);
             return femaleNames[_index];
         }

@@ -13,7 +13,7 @@ public class PreviewUI : MonoBehaviour
 
     // called upon OnPreviewChange event
     public void SetPreview() {
-        if(!isActivated) ActivateUI();
+        if(!isActivated) ActivateUI(true);
 
         title.GetComponent<TextMeshProUGUI>().text = personPreviewAsset.PersonName;
         for (int i = 0; i < lines.Length; i++)
@@ -22,12 +22,15 @@ public class PreviewUI : MonoBehaviour
         }
     }
 
-    void ActivateUI() {
-        isActivated = true;
-        title.SetActive(true);
+    // called upon ClosePreview event
+    public void ClosePreview() => ActivateUI(false);
+
+    void ActivateUI(bool newState) {
+        isActivated = newState;
+        title.SetActive(newState);
         foreach (var item in lines)
         {
-            item.SetActive(true);
+            item.SetActive(newState);
         }
     }
 }

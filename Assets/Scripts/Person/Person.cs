@@ -17,12 +17,12 @@ public class Person : MonoBehaviour {
     public GenderSO Orientation { get; private set; }
     public List<string> TraitLines { get; private set; } = new List<string>();
 
-    public void SetPerson(string _personName, GenderSO _gender, GenderSO _orientation, TraitSO[] _traits)
+    public void SetPerson(string personName, GenderSO gender, GenderSO orientation, TraitSO[] traits)
     {
-        Gender = _gender;
-        Traits = _traits;
-        Orientation = _orientation;
-        PersonName = _personName;
+        Gender = gender;
+        Traits = traits;
+        Orientation = orientation;
+        PersonName = personName;
 
         SetTraitLines();
 
