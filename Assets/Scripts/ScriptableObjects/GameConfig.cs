@@ -11,6 +11,9 @@ public class GameConfig : ScriptableObject
     private int startPersonNumber = 6;
 
     [SerializeField]
+    private int baseTableTime = 2;
+
+    [SerializeField]
     private int[] tableRewards = { -400, 100, 300, 600 };
 
     // properties
@@ -23,6 +26,11 @@ public class GameConfig : ScriptableObject
     {
         get { return startPersonNumber; }
         private set { startPersonNumber = value; }
+    }
+    public int BaseTableTime
+    {
+        get { return baseTableTime; }
+        private set { baseTableTime = value; }
     }
     public int[] TableRewards
     {

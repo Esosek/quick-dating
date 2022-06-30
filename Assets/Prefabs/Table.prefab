@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2655032305859902844
 Transform:
   m_ObjectHideFlags: 0
@@ -178,11 +178,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3699896685760821797}
+  - component: {fileID: 2021310846441456869}
   - component: {fileID: 4661323494618061932}
   - component: {fileID: 1336718968076975417}
+  - component: {fileID: 4204187989797609574}
   m_Layer: 0
   m_Name: Table
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +207,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2021310846441456869
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498762162394079095}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 6, z: 6}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!114 &4661323494618061932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +235,7 @@ MonoBehaviour:
   anyGender: {fileID: 11400000, guid: 6ad81071e54fa4637bc78c6e5973d2ef, type: 2}
   maleGender: {fileID: 11400000, guid: 0d3791e56f4eb44da8658131c23c1980, type: 2}
   femaleGender: {fileID: 11400000, guid: 92ee09aefb61a49ea90dbb6dc8f8b442, type: 2}
+  personSeatedEvent: {fileID: 11400000, guid: e694f4424ec1e7c9dbf681d4d033d406, type: 2}
 --- !u!114 &1336718968076975417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +251,24 @@ MonoBehaviour:
   scoreAsset: {fileID: 11400000, guid: ab75c1c19772444db9f28336d0df3537, type: 2}
   tableMultiplier: 1
   config: {fileID: 11400000, guid: c1ec65041d43d0519988f7b9a349021a, type: 2}
+--- !u!114 &4204187989797609574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498762162394079095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae614ae80de25f3cbbf0f53942f969b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wineGlasses:
+  - {fileID: 8584628341101151085}
+  - {fileID: 310704296424733744}
+  chairs:
+  - {fileID: 6035658833055839698}
+  - {fileID: 8070592239913868737}
 --- !u!1 &6035658833055839698
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8964812337028897239
 Transform:
   m_ObjectHideFlags: 0
