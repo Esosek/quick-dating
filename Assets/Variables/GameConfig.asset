@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   timer: 180
-  startPersonNumber: 3
+  startPersonNumber: 6
   tableRewards: 70feffff640000002c01000058020000
