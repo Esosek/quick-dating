@@ -19,8 +19,17 @@ public class TableVisuals : MonoBehaviour
         wineGlasses[index].SetActive(true);
     }
 
-    public void HideWineGlasses()
+    public void HideWineGlasses() => StartCoroutine(DelayedHideWineGlass());
+
+    private IEnumerator DelayedHideWineGlass()
     {
+        foreach (var glass in wineGlasses)
+        {
+            glass.GetComponent<Animator>().SetTrigger("popOut");
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
         foreach (var glass in wineGlasses)
         {
             glass.SetActive(false);

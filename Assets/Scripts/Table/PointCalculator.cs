@@ -8,6 +8,9 @@ public class PointCalculator : MonoBehaviour
     [SerializeField] private int tableMultiplier = 1;
     [SerializeField] private GameConfig config = null;
 
+    private bool isResolving = false;
+    private float timeWaited = 0f;
+
     private TableManager tableManager = null;
 
     private void Start() => tableManager = this.GetComponent<TableManager>();
@@ -36,5 +39,11 @@ public class PointCalculator : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         scoreAsset.AddValue(scoreValue);
         tableManager.ResetTable();
+    }
+
+
+    private void Resolve(float timeToWait)
+    {
+
     }
 }
