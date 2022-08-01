@@ -8,6 +8,7 @@ public class PersonDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     [SerializeField] private GameObject maleModel, femaleModel = null;
 
     [SerializeField] private GameObject orientationIcon = null;
+    [SerializeField] private BoolVariable gameState = null;
 
     private Camera personLoaderCamera = null;
     private GameObject activeModel = null;
@@ -27,6 +28,12 @@ public class PersonDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(!gameState.IsActive) 
+        { 
+            eventData.pointerDrag = null;
+            return; 
+        }
+        
         Debug.Log("DRAG: Begin");
         modelStartPos = activeModel.transform.position;
         orientationIcon.SetActive(false);

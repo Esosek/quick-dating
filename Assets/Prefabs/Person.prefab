@@ -1285,6 +1285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewPersonAsset: {fileID: 11400000, guid: a827981068eefc65eb021ccce266ed5d, type: 2}
   closePreviewEvent: {fileID: 11400000, guid: ca3c1c01e97193bd9b99bf2b9869496b, type: 2}
+  gameState: {fileID: 11400000, guid: a991b2dd427204d48aa1cb295a2d975b, type: 2}
 --- !u!114 &8659347739517231848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,6 +1302,7 @@ MonoBehaviour:
   maleModel: {fileID: 3290443250954857877}
   femaleModel: {fileID: 3290443252610190945}
   orientationIcon: {fileID: 2408134311252621164}
+  gameState: {fileID: 11400000, guid: a991b2dd427204d48aa1cb295a2d975b, type: 2}
 --- !u!95 &1798688601984162602
 Animator:
   serializedVersion: 4

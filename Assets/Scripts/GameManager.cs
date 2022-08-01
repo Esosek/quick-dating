@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameConfig config = null;
+    [SerializeField] private BoolVariable gameActiveState = null;
 
     [Header("Events")]
     [SerializeField] private GameEvent generatePersonEvent = null;
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        else Debug.LogWarning("GAME MANAGER: No config asset found!");        
+        else Debug.LogWarning("GAME MANAGER: No config asset found!");  
+
+        if(gameActiveState != null) gameActiveState.Set(true);      
     }
 }

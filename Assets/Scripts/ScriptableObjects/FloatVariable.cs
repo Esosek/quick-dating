@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Floar Variable", menuName = "Variable/Float")]
+[CreateAssetMenu(fileName = "New Float Variable", menuName = "Variable/Float")]
 public class FloatVariable : ScriptableObject {
     public float Value { get; private set; }
     [SerializeField] private GameEvent onChangeEvent;
