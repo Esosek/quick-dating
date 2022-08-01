@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 263dd91278662471bb0ed97cea3148ce, type: 3}
-  m_Name: Score
+  m_Script: {fileID: 11500000, guid: 96355e876a256417bad5166ca50387a7, type: 3}
+  m_Name: SubmitScore
   m_EditorClassIdentifier: 
-  currentValue: 300
-  onChangeEvent: {fileID: 11400000, guid: e5bf4cec718c44b46a03dc381b733ac6, type: 2}

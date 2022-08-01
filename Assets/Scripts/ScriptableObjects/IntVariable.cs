@@ -3,7 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Int Variable", menuName = "Variable/Int")]
 public class IntVariable : ScriptableObject {
 
-    public int Value { get; private set; }
+    public int Value { get { return currentValue; } private set { currentValue = value; } }
+    [SerializeField] private int currentValue;
     public GameEvent onChangeEvent;
 
     public void SetValue(int _value)
