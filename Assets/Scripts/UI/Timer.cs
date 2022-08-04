@@ -29,6 +29,7 @@ public class Timer : MonoBehaviour
         timerText.GetComponent<TextMeshProUGUI>().text = niceTime;
 
         if(timeAsset.Value <= 0 && onTimesUpEvent != null) {
+            timerText.GetComponent<TextMeshProUGUI>().text = "0:00";
             onTimesUpEvent.Raise();
         }
     }

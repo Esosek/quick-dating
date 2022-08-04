@@ -1,18 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class SceneLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] SceneLoaderSO sceneLoaderAsset = null;
+    private Animator anim;
+
+    private void Start() {
+        anim = GetComponentInChildren<Animator>();
+        if(sceneLoaderAsset == null) Debug.LogWarning("SCENE LOADER: Missing scene loader asset reference");
+    }
+    
+    public void InitLoadScene() // is called upon ChangeScene event
     {
-        
+        StartCoroutine(LoadScene());
+    }
+    
+    public void LoadSceneByIndex(int index) {
+        sceneLoaderAsset.LoadScene(index);
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator LoadScene() 
     {
-        
+        anim.SetTrigger("fadeOut");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneLoaderAsset.SceneIndexToLoad);
     }
 }

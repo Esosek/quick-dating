@@ -239,8 +239,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8, y: 6, z: 6}
-  m_Center: {x: 0, y: 3, z: 0}
+  m_Size: {x: 12, y: 8, z: 14}
+  m_Center: {x: 0, y: 4, z: 0}
 --- !u!114 &4661323494618061932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +272,15 @@ MonoBehaviour:
   scoreAsset: {fileID: 11400000, guid: ab75c1c19772444db9f28336d0df3537, type: 2}
   tableMultiplier: 1
   config: {fileID: 11400000, guid: c1ec65041d43d0519988f7b9a349021a, type: 2}
+  loadingBar: {fileID: 0}
+  pointsGainedText: {fileID: 0}
+  gameActiveState: {fileID: 11400000, guid: a991b2dd427204d48aa1cb295a2d975b, type: 2}
+  negativePointsColor:
+    serializedVersion: 2
+    rgba: 4278190335
+  positivePointsColor:
+    serializedVersion: 2
+    rgba: 4278255360
 --- !u!114 &4204187989797609574
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class PointCalculator : MonoBehaviour
     [SerializeField] private GameConfig config = null;
     [SerializeField] private Image loadingBar = null;
     [SerializeField] private GameObject pointsGainedText = null;
+    [SerializeField] private BoolVariable gameActiveState = null;
 
     [SerializeField] private Color32 negativePointsColor = Color.red;
     [SerializeField] private Color32 positivePointsColor = Color.green;
@@ -51,7 +52,7 @@ public class PointCalculator : MonoBehaviour
 
     private void Update() 
     {
-        if(isResolving)
+        if(gameActiveState.IsActive && isResolving)
         {
             timeWaited += Time.deltaTime;
             float _progress = timeWaited / timeToWait;

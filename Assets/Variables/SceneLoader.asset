@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5434dc51c6ef2361b8cac954df6c150f, type: 3}
-  m_Name: GameConfig
+  m_Script: {fileID: 11500000, guid: b6f7d8b30b778b6b99cf3d221fa982a6, type: 3}
+  m_Name: SceneLoader
   m_EditorClassIdentifier: 
-  timer: 180
-  startPersonNumber: 6
-  baseTableTime: 8
-  tableRewards: 70feffff640000002c01000058020000
+  sceneToLoad: 0
+  changeSceneEvent: {fileID: 11400000, guid: 5c5f9b54fd0cff3f2ab4eb188dc35c0d, type: 2}

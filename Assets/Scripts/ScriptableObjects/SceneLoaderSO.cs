@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SceneLoaderSO : MonoBehaviour
+[CreateAssetMenu(fileName = "SceneLoader", menuName = "SceneLoader")]
+public class SceneLoaderSO : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public int SceneIndexToLoad
     {
-        
+        get { return sceneToLoad; }
+        private set { sceneToLoad = value; }
     }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private int sceneToLoad = 0;
+    [SerializeField] private GameEvent changeSceneEvent = null;
+
+    public void LoadScene(int index)
     {
-        
+        SceneIndexToLoad = index;
+        if(changeSceneEvent != null) changeSceneEvent.Raise();
     }
+
+    public void ResetScene() => LoadScene(SceneManager.GetActiveScene().buildIndex);
+
 }
