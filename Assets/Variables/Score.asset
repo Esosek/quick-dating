@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263dd91278662471bb0ed97cea3148ce, type: 3}
   m_Name: Score
   m_EditorClassIdentifier: 
-  currentValue: 300
+  currentValue: 5
   onChangeEvent: {fileID: 11400000, guid: e5bf4cec718c44b46a03dc381b733ac6, type: 2}
