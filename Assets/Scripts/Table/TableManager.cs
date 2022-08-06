@@ -26,6 +26,7 @@ public class TableManager : MonoBehaviour
         if(activePeople.Count == 0) {
             activePeople.Add(newPerson);
             visualHandler.ShowWineGlass(0);
+            visualHandler.DisplaySeatedPersonNeeds(activePeople[0]); // display icons of seated person needs and orientation
             if(personSeatedEvent != null) personSeatedEvent.Raise();                
             return true;
         }
@@ -57,10 +58,11 @@ public class TableManager : MonoBehaviour
         bool _personOneCompatible = CheckOrientation(activePeople[0], newPerson);
         bool _personTwoCompatible = CheckOrientation(newPerson, activePeople[0]);
 
-        // final verdict
+        // these people are orientation compatible -> resolve them
         if(_personOneCompatible && _personTwoCompatible) {
             activePeople.Add(newPerson);
             resolver.Calculate(activePeople[0], activePeople[1]);
+            visualHandler.HideSeatedPersonNeeds(); // hide visuals for seated person needs
             return true;            
         }
 

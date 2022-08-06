@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TableVisuals : MonoBehaviour
 {
     [SerializeField] private GameObject[] wineGlasses = null;
     [SerializeField] private GameObject[] chairs = null;
+    [SerializeField] private Image seatedPersonOrientation = null;
+    [SerializeField] private Image[] seatedPersonTraits = null;
 
     private List<GameObject> seatedPeople = new List<GameObject>();
 
@@ -66,5 +69,26 @@ public class TableVisuals : MonoBehaviour
         }
 
         seatedPeople.Clear();
+    }
+
+    public void DisplaySeatedPersonNeeds(Person seatedPerson)
+    {
+        seatedPersonOrientation.sprite = seatedPerson.Orientation.icon;
+        seatedPersonOrientation.gameObject.SetActive(true);
+        for (int i = 0; i < seatedPersonTraits.Length; i++)
+        {
+            seatedPersonTraits[i].sprite = seatedPerson.Traits[i].icon;
+            seatedPersonTraits[i].gameObject.SetActive(true);
+        }
+        
+    }
+
+    public void HideSeatedPersonNeeds()
+    {
+        seatedPersonOrientation.gameObject.SetActive(false);
+        foreach (var traitImage in seatedPersonTraits)
+        {
+            traitImage.gameObject.SetActive(false);
+        }
     }
 }
