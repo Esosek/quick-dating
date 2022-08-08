@@ -73,6 +73,15 @@ public class PointCalculator : MonoBehaviour
         if(pointsGainedText != null) StartCoroutine(ShowPointsGained());
     }
 
+        public void InstantResolve() // is called OnTimesUp event
+    {
+        if(isResolving) // table in progress
+        {
+            scoreToAdd /= 2; // get halve the points
+            Resolve();
+        }
+    }
+
     private IEnumerator ShowPointsGained()
     {
         TextMeshProUGUI _textContent = pointsGainedText.GetComponent<TextMeshProUGUI>();

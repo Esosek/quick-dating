@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 4661323494618061932}
   - component: {fileID: 1336718968076975417}
   - component: {fileID: 4204187989797609574}
+  - component: {fileID: 4901841466905837684}
   m_Layer: 0
   m_Name: Table
   m_TagString: Table
@@ -299,6 +300,36 @@ MonoBehaviour:
   chairs:
   - {fileID: 6035658833055839698}
   - {fileID: 8070592239913868737}
+  seatedPersonOrientation: {fileID: 0}
+  seatedPersonTraits: []
+--- !u!114 &4901841466905837684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498762162394079095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab30217356d54400aa93da5dcb4062d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b79fa6c2398f7412b9a221cafb281b2f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1336718968076975417}
+        m_TargetAssemblyTypeName: PointCalculator, Assembly-CSharp
+        m_MethodName: InstantResolve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6035658833055839698
 GameObject:
   m_ObjectHideFlags: 0
