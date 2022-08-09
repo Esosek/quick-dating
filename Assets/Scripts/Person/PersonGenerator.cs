@@ -22,6 +22,12 @@ public class PersonGenerator : MonoBehaviour {
         _newPerson.GetComponent<Person>().SetPerson(GenerateName(gender), gender, GenerateOrientation(), GenerateTraits(3));
     }
 
+    public void Generate(string personName, GenderSO gender, GenderSO orientation, TraitSO[] traits)
+    {
+        GameObject _newPerson = Instantiate(personPrefab, loaderTransform);
+        _newPerson.GetComponent<Person>().SetPerson(personName, gender, orientation, traits);
+    }
+
     GenderSO GenerateGender()
     {
         int _index = Random.Range(1, genderArray.Length);
