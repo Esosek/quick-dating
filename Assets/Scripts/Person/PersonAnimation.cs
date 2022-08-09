@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PersonAnimation : MonoBehaviour
@@ -8,8 +6,12 @@ public class PersonAnimation : MonoBehaviour
     [SerializeField] private int sitAnimationCount = 2;
 
     [SerializeField] private Animator anim = null;
+    [SerializeField] private bool startSeated = false;
 
-    private void Start() => SetAnimationsVariation(); // to randomize starting state
+    private void Start() {
+        SetAnimationsVariation(); // to randomize starting state
+        if(startSeated) anim.SetTrigger("sit"); // people start seated in menu
+    }
 
     void SetAnimationsVariation() {
         int _newIdleIndex = Random.Range(0, idleAnimationsCount);
