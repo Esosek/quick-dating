@@ -10,6 +10,7 @@ public class TableManager : MonoBehaviour
     [SerializeField] private GenderSO anyGender, maleGender, femaleGender = null;
     [SerializeField] private GameEvent personSeatedEvent = null;
 
+    private TableSound sounds = null;
     private TableVisuals visualHandler = null;
     private PointCalculator resolver = null;
 
@@ -17,6 +18,7 @@ public class TableManager : MonoBehaviour
     {
         resolver = GetComponent<PointCalculator>();
         visualHandler = GetComponent<TableVisuals>();
+        sounds = GetComponent<TableSound>();
     }
 
 
@@ -44,6 +46,7 @@ public class TableManager : MonoBehaviour
             {
                 if(personSeatedEvent != null) personSeatedEvent.Raise();
                 visualHandler.ShowWineGlass(1);
+                sounds.GreetingsSound(activePeople);
             } 
                 
             return isCompatible;

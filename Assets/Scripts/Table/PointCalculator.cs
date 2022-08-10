@@ -20,25 +20,33 @@ public class PointCalculator : MonoBehaviour
     private float timeWaited = 0f;
     private float timeToWait = 0f;
     private int scoreToAdd = 0;
+    private int sharedTraits = 0;
 
     private TableManager tableManager = null;
+    private TableSound sounds = null;
+    private Person firstSeatedPerson = null;
 
-    private void Start() => tableManager = this.GetComponent<TableManager>();
+    private void Start() 
+    {
+        tableManager = this.GetComponent<TableManager>();
+        sounds = this.GetComponent<TableSound>();
+    }
     
     public void Calculate(Person firstPerson, Person secondPerson)  // called from TableManager
     {
-        int matches = 0;
-        
-        // counts number of matches
+        sharedTraits = 0;
+        firstSeatedPerson = firstPerson; // save reference for first seated person for sound purpose
+
+        // counts number of sharedTraits
         foreach (var trait in firstPerson.Traits)
         {
             if(secondPerson.Traits.Contains(trait))
             {
-                matches++;
+                sharedTraits++;
             }
         }
 
-        scoreToAdd = config.TableRewards[matches] * tableMultiplier;
+        scoreToAdd = config.TableRewards[sharedTraits] * tableMultiplier;
         timeToWait = tableMultiplier * config.BaseTableTime * 0.75f; // multiplied by 0.75 to better suit wait times for higher multipliers
         StartResolving();
         
@@ -69,6 +77,8 @@ public class PointCalculator : MonoBehaviour
         scoreAsset.AddValue(scoreToAdd);
         tableManager.ResetTable();
         loadingBar.gameObject.SetActive(false);
+
+        sounds.ResolveSound(firstSeatedPerson, sharedTraits);
 
         if(pointsGainedText != null) StartCoroutine(ShowPointsGained());
     }

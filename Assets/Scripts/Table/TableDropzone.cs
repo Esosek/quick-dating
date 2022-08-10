@@ -1,13 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TableDropzone : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDropHandler
+public class TableDropzone : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public void OnDrop(PointerEventData eventData)
-    {
-
-    }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         // check if dragging something

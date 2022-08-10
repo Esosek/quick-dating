@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
 
         else
             instance = this;
+            DontDestroyOnLoad(this.gameObject);
 
 
         foreach (Sound s in sounds)
@@ -58,5 +59,9 @@ public class AudioManager : MonoBehaviour
 
 
         s.source.Stop();
+    }
+
+    private void Start() {
+        Play(sounds[0]); // background chattering
     }
 }

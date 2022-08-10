@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 1336718968076975417}
   - component: {fileID: 4204187989797609574}
   - component: {fileID: 4901841466905837684}
+  - component: {fileID: 8532900744848865231}
   m_Layer: 0
   m_Name: Table
   m_TagString: Table
@@ -330,6 +331,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8532900744848865231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498762162394079095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d55d0251c3659b28ad4283583e1c0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manGreetings:
+  - {fileID: 11400000, guid: 8f2870bb9b1938071a8ceede3234f49f, type: 2}
+  - {fileID: 11400000, guid: a5ba7c9db3cc676ceaf38cfab84a4bce, type: 2}
+  womanGreetings:
+  - {fileID: 11400000, guid: d5286dc1d1a854b2fac0967018cce8a2, type: 2}
+  - {fileID: 11400000, guid: 52a6c918e5cd50d7b9cb756257e85dfd, type: 2}
+  womanTraits03: {fileID: 11400000, guid: cd490004bf4a261dcb9eb02be1790544, type: 2}
+  womanTraits00: {fileID: 11400000, guid: d2273d35a0ee4030da1564dfcd24b18d, type: 2}
+  manTraits00: {fileID: 11400000, guid: 62b27cef5e45fd52c8545a2f1eaa950f, type: 2}
+  manTraits03: {fileID: 11400000, guid: 4340a26cc4e5e53b180df83e67f512d5, type: 2}
+  femaleGender: {fileID: 11400000, guid: 92ee09aefb61a49ea90dbb6dc8f8b442, type: 2}
+  audioManager: {fileID: 0}
 --- !u!1 &6035658833055839698
 GameObject:
   m_ObjectHideFlags: 0

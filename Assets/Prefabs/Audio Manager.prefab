@@ -44,6 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d452c12b521fb40b680f1d506cb9f12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 11400000, guid: 58054ebb04c2d094dbb9153ee0c18281, type: 2}
+  - {fileID: 11400000, guid: 62b27cef5e45fd52c8545a2f1eaa950f, type: 2}
+  - {fileID: 11400000, guid: 4340a26cc4e5e53b180df83e67f512d5, type: 2}
+  - {fileID: 11400000, guid: 8f2870bb9b1938071a8ceede3234f49f, type: 2}
+  - {fileID: 11400000, guid: a5ba7c9db3cc676ceaf38cfab84a4bce, type: 2}
+  - {fileID: 11400000, guid: d2273d35a0ee4030da1564dfcd24b18d, type: 2}
+  - {fileID: 11400000, guid: cd490004bf4a261dcb9eb02be1790544, type: 2}
+  - {fileID: 11400000, guid: d5286dc1d1a854b2fac0967018cce8a2, type: 2}
+  - {fileID: 11400000, guid: 52a6c918e5cd50d7b9cb756257e85dfd, type: 2}
   musicVolume: 0
   soundVolume: 0
