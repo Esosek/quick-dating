@@ -8,7 +8,12 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private GameEvent generatePersonEvent = null;
 
-    void Start()
+    private void Start()
+    {
+        Setup();
+    }
+
+    public void Setup()
     {
         if(config != null) 
         {
@@ -20,6 +25,11 @@ public class GameManager : MonoBehaviour
 
         else Debug.LogWarning("GAME MANAGER: No config asset found!");  
 
-        if(gameActiveState != null) gameActiveState.Set(true);      
+        if(gameActiveState != null) gameActiveState.Set(true);
+    }
+
+    public void SetConfig(GameConfig newConfig)
+    {
+        config = newConfig;
     }
 }

@@ -98,4 +98,6 @@ public class PointCalculator : MonoBehaviour
 
         pointsGainedText.SetActive(false);
     }
+
+    public void SetConfig(GameConfig newConfig) => config = newConfig;
 }

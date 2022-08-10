@@ -7,14 +7,11 @@ public class CustomButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] private GameEvent gameEvent;
     [SerializeField] private Color normalColor = Color.white;
     [SerializeField] private Color highlightedColor = Color.white;
-    [SerializeField] private float transitionDuration = 0.1f;
+    [SerializeField] protected float transitionDuration = 0.1f;
     
-    private Image image = null;
-    private float transitionTime = 0f;
-    private Color startingColor = Color.white;
-    private Color endColor = Color.white;
-
-    private void Start() => image = GetComponent<Image>();
+    protected float transitionTime = 0f;
+    protected Color startingColor = Color.white;
+    protected Color endColor = Color.white;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -40,9 +37,14 @@ public class CustomButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     }
 
     private void Update() {
+        TransitionUpdate();
+    }
+
+    public virtual void TransitionUpdate()
+    {
         if(transitionTime > 1) return;
         
         transitionTime += Time.deltaTime / transitionDuration;
-        image.color = Color.Lerp(startingColor, endColor, transitionTime);
+        GetComponent<Image>().color = Color.Lerp(startingColor, endColor, transitionTime);
     }
 }

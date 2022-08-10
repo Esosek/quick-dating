@@ -13,7 +13,7 @@ public class PersonGenerator : MonoBehaviour {
     private string[] maleNames = new string[] {"Michael", "Mark", "Paul", "Frank", "Lucas", "Alfred", "Eduard", "Noah", "Henry", "Mateo", "Ethan" };
     private string[] femaleNames = new string[] {"Kate", "Alice", "Josie", "Mary", "Eleanor", "Charlotte", "Emma", "Mia", "Ava", "Chloe" };
 
-    public void Generate()
+    public void Generate() // called OnPersonSeated event
     {
         GameObject _newPerson = Instantiate(personPrefab, loaderTransform);
         // store gender to use it in name generator
@@ -22,10 +22,10 @@ public class PersonGenerator : MonoBehaviour {
         _newPerson.GetComponent<Person>().SetPerson(GenerateName(gender), gender, GenerateOrientation(), GenerateTraits(3));
     }
 
-    public void Generate(string personName, GenderSO gender, GenderSO orientation, TraitSO[] traits)
+    public void Generate(PersonVariable person) // generate specific person
     {
         GameObject _newPerson = Instantiate(personPrefab, loaderTransform);
-        _newPerson.GetComponent<Person>().SetPerson(personName, gender, orientation, traits);
+        _newPerson.GetComponent<Person>().SetPerson(person.PersonName, person.Gender, person.Orientation, person.Traits);
     }
 
     GenderSO GenerateGender()

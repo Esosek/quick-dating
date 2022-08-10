@@ -24,7 +24,7 @@ public class Person : MonoBehaviour {
         Orientation = orientation;
         PersonName = personName;
 
-        SetTraitLines();
+        //SetTraitLines();
 
         orientationImage.sprite = Orientation.icon;
 

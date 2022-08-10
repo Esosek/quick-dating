@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18029143, g: 0.22572419, b: 0.30693057, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 781090405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ec1c1b4ba10457abf58ea3bc542a29, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b3a041698dcb2166b4775c3b9307c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 23d3bf6c2b1b249df8f7f84ea5a0534b, type: 2}
@@ -2001,7 +2001,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 857587346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ec1c1b4ba10457abf58ea3bc542a29, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b3a041698dcb2166b4775c3b9307c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: db7d6f9514cf84474b9bf6744d388456, type: 2}
@@ -2930,6 +2930,7 @@ GameObject:
   - component: {fileID: 1277912148}
   - component: {fileID: 1277912147}
   - component: {fileID: 1277912149}
+  - component: {fileID: 1277912150}
   m_Layer: 5
   m_Name: Scene Loader
   m_TagString: Untagged
@@ -3084,6 +3085,34 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1277912150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277912142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab30217356d54400aa93da5dcb4062d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 5c5f9b54fd0cff3f2ab4eb188dc35c0d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1277912148}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: InitLoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
