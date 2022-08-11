@@ -353,8 +353,9 @@ MonoBehaviour:
   womanTraits00: {fileID: 11400000, guid: d2273d35a0ee4030da1564dfcd24b18d, type: 2}
   manTraits00: {fileID: 11400000, guid: 62b27cef5e45fd52c8545a2f1eaa950f, type: 2}
   manTraits03: {fileID: 11400000, guid: 4340a26cc4e5e53b180df83e67f512d5, type: 2}
+  traits01: {fileID: 11400000, guid: b63519717b6b085ee87e01d8a3308af2, type: 2}
+  traits02: {fileID: 11400000, guid: 01f3f64e55dd620f2aed752fd93d8ea8, type: 2}
   femaleGender: {fileID: 11400000, guid: 92ee09aefb61a49ea90dbb6dc8f8b442, type: 2}
-  audioManager: {fileID: 0}
 --- !u!1 &6035658833055839698
 GameObject:
   m_ObjectHideFlags: 0

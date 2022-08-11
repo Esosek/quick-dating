@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 1119
+  controlID: 1060
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 1209
+  controlID: 966
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 1210
+  controlID: 967
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1174
+  controlID: 988
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 1
+  m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -478,9 +478,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9e7a0000
-      m_LastClickedID: 31390
-      m_ExpandedIDs: 7885ffffe08effff3afbffff507a00009a7a0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: ccb3ffffceb4ffffeab8ffff7ebcffff24beffff18eeffffbef5ffff3afbffffbc670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -729,9 +729,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 329, y: 152.1, z: 0}
+    m_Target: {x: 307.68524, y: 232.80637, z: 51.1591}
     speed: 2
-    m_Value: {x: 329, y: 152.1, z: 0}
+    m_Value: {x: 307.68524, y: 232.80637, z: 51.1591}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -782,9 +782,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.12863772, y: 0.008925167, z: -0.0011577607, w: -0.99165124}
   m_Size:
-    m_Target: 125.076805
+    m_Target: 256.96655
     speed: 2
-    m_Value: 125.076805
+    m_Value: 256.96655
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1016,22 +1016,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Sound/Clips
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Sound/Clips
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/esosek/GameDev/2021.3.4f1/Projects/quick-dating
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 144}
-    m_SelectedIDs: 5e650000
-    m_LastClickedID: 25950
-    m_ExpandedIDs: 0000000034650000366500003865000000ca9a3b
+    m_SelectedIDs: 087f0000
+    m_LastClickedID: 32520
+    m_ExpandedIDs: 000000004465000046650000486500008a65000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1059,7 +1059,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000034650000366500003865000000ca9a3b
+    m_ExpandedIDs: 0000000044650000466500004865000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
