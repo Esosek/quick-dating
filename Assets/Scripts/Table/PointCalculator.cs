@@ -21,6 +21,7 @@ public class PointCalculator : MonoBehaviour
     private float timeToWait = 0f;
     private int scoreToAdd = 0;
     private int sharedTraits = 0;
+    private float resolvingProgress = 0f; // 0 - 1 progress for proportional rewards
 
     private TableManager tableManager = null;
     private TableSound sounds = null;
@@ -63,8 +64,8 @@ public class PointCalculator : MonoBehaviour
         if(gameActiveState.IsActive && isResolving)
         {
             timeWaited += Time.deltaTime;
-            float _progress = timeWaited / timeToWait;
-            loadingBar.fillAmount = _progress;
+            resolvingProgress = timeWaited / timeToWait;
+            loadingBar.fillAmount = resolvingProgress;
 
             if(timeWaited >= timeToWait) Resolve();
         }
@@ -87,7 +88,8 @@ public class PointCalculator : MonoBehaviour
     {
         if(isResolving) // table in progress
         {
-            scoreToAdd /= 2; // get halve the points
+            float _rewardScore = scoreToAdd * resolvingProgress; // calculate proportional score on game end
+            scoreToAdd = Mathf.RoundToInt(_rewardScore);
             Resolve();
         }
     }
