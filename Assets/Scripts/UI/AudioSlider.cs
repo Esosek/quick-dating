@@ -9,6 +9,7 @@ public class AudioSlider : MonoBehaviour
     [SerializeField] private FloatVariable volumeVariable = null;
 
     private void Start() {
+        audioSlider.value = volumeVariable.Value;
         audioMixer.SetFloat("volume", volumeVariable.Value);
     }
 
