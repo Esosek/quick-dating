@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808cf3b2e449e412f9be94aa78751506, type: 3}
   m_Name: PlayerName
   m_EditorClassIdentifier: 
-  currentValue: Plosnik
+  currentValue: Unknown Lover
   onChangeEvent: {fileID: 0}
